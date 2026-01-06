@@ -17,16 +17,16 @@ class OptimizationSetup:
     
     def __init__(self, game_config):
         self.game_config = game_config
-        # RTP breakdown for base mode (must sum to 0.96):
+        # RTP breakdown for base mode (must sum to 0.97):
         # - zero wins: 0% RTP (dead spins)
-        # - freegame: ~36% RTP (from free spin bonus)
+        # - freegame: ~37% RTP (from free spin bonus)
         # - basegame: ~60% RTP (from base game wins)
         self.game_config.opt_params = {
             "base": {
                 "conditions": {
                     "0": ConstructConditions(rtp=0.0, av_win=0, search_conditions=0).return_dict(),
                     "freegame": ConstructConditions(
-                        rtp=0.36, hr=200, search_conditions={"symbol": "scatter"}
+                        rtp=0.37, hr=200, search_conditions={"symbol": "scatter"}
                     ).return_dict(),
                     "basegame": ConstructConditions(hr=3.5, rtp=0.60).return_dict(),
                 },
@@ -52,7 +52,7 @@ class OptimizationSetup:
             "bonus": {
                 "conditions": {
                     "freegame": ConstructConditions(
-                        rtp=0.96, hr=1, search_conditions={"symbol": "scatter"}
+                        rtp=0.97, hr=1, search_conditions={"symbol": "scatter"}
                     ).return_dict(),
                 },
                 "scaling": ConstructScaling([]).return_dict(),

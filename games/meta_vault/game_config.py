@@ -266,14 +266,14 @@ class GameConfig(Config):
         """Read csv from reelstrip path and map numeric IDs to symbol names."""
         reelstrips = super().read_reels_csv(file_path)
         
-        # Mapping based on user request
-        # 11 -> W (Wild)
-        # 12 -> S (Scatter)
-        # 13 -> G (Collector)
+        # Mapping based on user request and CSV format
+        # 11 -> W (Wild), 12 -> S (Scatter), 13 -> G (Collector)
+        # Also handle direct CSV letter: C -> G (Collector)
         symbol_map = {
             "11": "W",
             "12": "S",
-            "13": "G"
+            "13": "G",
+            "C": "G",   # Direct mapping from CSV
         }
         
         for reel in reelstrips:

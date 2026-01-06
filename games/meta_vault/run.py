@@ -97,7 +97,7 @@ if __name__ == "__main__":
     # ============================================
     
     if run_conditions["run_sims"]:
-        print("\n🎰 Running Simulations...")
+        print("\nRunning Simulations...")
         create_books(
             gamestate,
             config,

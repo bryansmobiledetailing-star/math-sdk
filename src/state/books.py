@@ -1,6 +1,7 @@
 "Handles independent simulation events and details."
 
 from copy import deepcopy
+import json
 
 
 class Book:
@@ -16,8 +17,14 @@ class Book:
         self.freegame_wins = 0.0
 
     def add_event(self, event: dict):
-        "Append event to book."
-        self.events.append(deepcopy(event))
+        "Append event to book in a JSON-safe manner to avoid expensive deepcopy of complex objects."
+        try:
+            # Convert to JSON and back, stringifying any non-serializable objects to keep events lightweight
+            json_str = json.dumps(event, default=lambda o: str(o))
+            self.events.append(json.loads(json_str))
+        except Exception:
+            # Fallback to deepcopy to preserve previous behaviour if JSON conversion fails
+            self.events.append(deepcopy(event))
 
     def append_book_items(self, event_id: int, appended_info: dict):
         "Modify an existing book event at position 'event_id'"
