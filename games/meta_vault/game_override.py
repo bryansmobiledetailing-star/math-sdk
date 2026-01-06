@@ -85,7 +85,7 @@ class GameStateOverride(GameExecutables):
         collector_count = 0
         for reel in self.board:
             for symbol in reel:
-                if symbol.name == "C":
+                if symbol.name == "G":
                     collector_count += 1
         
         self.gold_collected += collector_count  # Keep variable name for compatibility
