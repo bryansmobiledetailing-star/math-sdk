@@ -42,7 +42,7 @@ class GameCalculations(Executables):
                         symbol.name = chosen_wild
                         symbol.multiplier = self.config.wild_multiplier_values[chosen_wild]
                         # Add attribute for frontend
-                        symbol.add_attribute({'multiplier': symbol.multiplier})
+                        symbol.assign_attribute({'multiplier': symbol.multiplier})
 
         # 2. Handle Symbol Transformations (Free Games Only)
         if self.gametype == self.config.freegame_type:
@@ -62,10 +62,10 @@ class GameCalculations(Executables):
                     for symbol in reel:
                         if symbol.name in transform_map:
                             symbol.name = transform_map[symbol.name]
-                            symbol.add_attribute({'transformed': True})
+                            symbol.assign_attribute({'transformed': True})
 
         # 3. Standard Ways Calculation
-        self.win_data = Ways.get_ways_wins(
+        self.win_data = Ways.get_ways_data(
             self.config,
             self.board,
             wild_key="wild",
