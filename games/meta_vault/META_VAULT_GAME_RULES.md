@@ -8,9 +8,9 @@
 | **Game Type** | Video Slot |
 | **Win Type** | 1024 Ways |
 | **Grid Size** | 5 Reels × 4 Rows |
-| **RTP** | 95.99% |
+| **RTP** | 97% |
 | **Volatility** | High |
-| **Max Win** | 10,000x |
+| **Max Win** | 50,000x |
 | **Min Bet** | Configurable |
 | **Max Bet** | Configurable |
 
@@ -22,24 +22,23 @@ All pays are shown as multipliers of total bet for ways wins.
 
 ### Premium Symbols
 
-| Symbol | 5 of a Kind | 4 of a Kind | 3 of a Kind |
-|--------|-------------|-------------|-------------|
-| **V** (Vault) | 183x | 46x | 13.6x |
-| **H1** (Buffalo) | 91x | 22x | 7.3x |
-| **H2** (Eagle) | 68x | 18.5x | 5.4x |
-| **H3** (Wolf) | 46x | 13.6x | 4.6x |
-| **H4** (Cougar) | 37x | 10.7x | 3.7x |
+| Symbol | 5 of a Kind | 4 of a Kind | 3 of a Kind | 2 of a Kind |
+|--------|-------------|-------------|-------------|-------------|
+| **H1** (The Architect) | 2.43x | 1.16x | 0.59x | 0.15x |
+| **H2** (Encryption Core) | 1.47x | 0.69x | 0.38x | - |
+| **H3** (Cyber-Doberman) | 1.16x | 0.59x | 0.29x | - |
+| **H4** (Access Card) | 0.69x | 0.29x | 0.14x | - |
 
 ### Low Symbols
 
 | Symbol | 5 of a Kind | 4 of a Kind | 3 of a Kind |
 |--------|-------------|-------------|-------------|
-| **L1** (A) | 14.8x | 5.1x | 2.06x |
-| **L2** (K) | 11.9x | 4.1x | 1.58x |
-| **L3** (Q) | 9.9x | 3.26x | 1.28x |
-| **L4** (J) | 8.4x | 2.77x | 1.09x |
-| **L5** (10) | 6.4x | 2.29x | 0.90x |
-| **L6** (9) | 5.4x | 1.90x | 0.74x |
+| **L1** (0x) | 0.29x | 0.11x | 0.06x |
+| **L2** (FF) | 0.23x | 0.07x | 0.03x |
+| **L3** (A1) | 0.23x | 0.07x | 0.03x |
+| **L4** (DE) | 0.14x | 0.05x | 0.02x |
+| **L5** (7B) | 0.14x | 0.05x | 0.02x |
+| **L6** (00) | 0.11x | 0.03x | 0.01x |
 
 ### Special Symbols
 
@@ -95,18 +94,17 @@ During Free Spins, **Gold Vault (G)** symbols appear on the reels.
 
 ### Transformation Thresholds
 
-| Golds Collected | Symbol Transformed | New Symbol |
-|-----------------|-------------------|------------|
-| 4 | H1 (Buffalo) | V (Vault) |
-| 7 | H2 (Eagle) | V (Vault) |
-| 13 | H3 (Wolf) | V (Vault) |
-| 15 | H4 (Cougar) | V (Vault) |
+| Collectors Collected | Symbol Transformed | New Symbol |
+|----------------------|-------------------|------------|
+| 4 | H4 (Access Card) | H1 (The Architect) |
+| 7 | H3 (Cyber-Doberman) | H1 (The Architect) |
+| 13 | H2 (Encryption Core) | H1 (The Architect) |
 
 **Transformations are permanent for the rest of the Free Spin session!**
 
 Once transformed:
-- All H1 symbols become V (Vault) for remaining spins
-- V (Vault) is the highest paying symbol at 183x for 5-of-a-kind
+- All transformed symbols become H1 (The Architect) for remaining spins
+- H1 is the highest paying symbol at 2.43x for 5-of-a-kind (plus 2-of-a-kind pays!)
 
 ---
 
@@ -153,7 +151,7 @@ This can lead to massive wins when multiple multiplier wilds land in a winning c
 ### Key Metrics
 - **Hit Frequency**: 59.9%
 - **Average Win (when winning)**: 160.34x
-- **Max Win**: 10,000x (win cap)
+- **Max Win**: 50,000x (win cap)
 
 ---
 
@@ -181,11 +179,11 @@ This can lead to massive wins when multiple multiplier wilds land in a winning c
 ## 📈 Return to Player (RTP)
 
 | Bet Mode | Theoretical RTP |
-|----------|-----------------|
-| Base Game | 95.99% |
-| Bonus Buy | ~96% |
+|----------|----------------|
+| Base Game | 97% |
+| Bonus Buy | 97% |
 
-*RTP calculated over 100,000+ simulations*
+*RTP calculated over 1,000,000+ simulations*
 
 ---
 
@@ -194,11 +192,11 @@ This can lead to massive wins when multiple multiplier wilds land in a winning c
 ```
 Game: Meta Vault
 Type: 1024 Ways Video Slot
-RTP: 95.99%
+RTP: 97%
 Volatility: High
-Max Win: 10,000x
+Max Win: 50,000x
 Hit Rate: 59.9%
-Free Spin Trigger: 1 in 8 (3+ scatters)
+Free Spin Trigger: 1 in 200 (3+ scatters)
 ```
 
 ---
