@@ -3,26 +3,34 @@ Meta Vault Math SDK
 97% RTP | 1024-Ways Slot Machine Engine
 """
 
-from .game_config import (
-    Symbol, PAYTABLE, TRANSFORMATION_THRESHOLDS,
-    WILD_SYMBOLS, WILD_MULTIPLIERS, TARGET_RTP,
-    REEL_COUNT, ROWS_PER_REEL, TOTAL_WAYS,
-    get_security_level_color, get_active_transformations
-)
+# This __init__.py is for optional package imports
+# The math-sdk is designed to run games directly via `make run GAME=<name>`
+# These imports are only available when imported as a package
 
-from .gamestate import GameState, GameEngine, SpinResult, GamePhase, ReelGenerator
+try:
+    from .game_config import (
+        Symbol, PAYTABLE, TRANSFORMATION_THRESHOLDS,
+        WILD_SYMBOLS, WILD_MULTIPLIERS, TARGET_RTP,
+        REEL_COUNT, ROWS_PER_REEL, TOTAL_WAYS,
+        get_security_level_color, get_active_transformations
+    )
 
-from .game_override import (
-    apply_transformations, get_transformation_events,
-    calculate_transformation_level, get_infinite_breach_multiplier
-)
+    from .gamestate import GameState, GameEngine, SpinResult, GamePhase, ReelGenerator
 
-from .ways_evaluator import WaysEvaluator, validate_rtp
+    from .game_override import (
+        apply_transformations, get_transformation_events,
+        calculate_transformation_level, get_infinite_breach_multiplier
+    )
 
-from .books import (
-    serialize_event, deserialize_event, EventQueue,
-    create_spin_event, create_transformation_event, create_collection_event
-)
+    from .ways_evaluator import WaysEvaluator, validate_rtp
+
+    from .books import (
+        serialize_event, deserialize_event, EventQueue,
+        create_spin_event, create_transformation_event, create_collection_event
+    )
+except ImportError:
+    # Running directly (not as a package) - imports not available
+    pass
 
 __version__ = "1.0.0"
 __all__ = [
